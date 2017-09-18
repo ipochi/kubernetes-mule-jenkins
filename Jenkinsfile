@@ -4,7 +4,6 @@ node {
 
     imageName = "mule-jenkins-kubernetes-demo"
 
-	stages {
 		stage('Build') {
 			steps {
                 sh "mvn clean package"
@@ -27,5 +26,4 @@ node {
                 sh "kubectl create -f app-service.yaml"
             }		
 		}
-	}
 }
