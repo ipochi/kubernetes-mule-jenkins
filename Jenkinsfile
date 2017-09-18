@@ -6,7 +6,7 @@ node {
 
 		stage('Build') {
 	
-                sh "mvn clean package"
+                sh "mvn clean package --DskipTests=true"
             		
 		}
         stage('Build and Push') {
