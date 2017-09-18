@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: iipochi123/jenkins-kubectl-maven:firsttry
+        image: iipochi123/jenkins-docker-kubectl-maven:firsttry
         ports:
         - containerPort: 8080
