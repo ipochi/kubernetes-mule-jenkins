@@ -13,7 +13,7 @@ node {
 
 
                 docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                    def customImage = docker.build("${imageName}", "--volume=/var/run/docker.sock:/var/run/docker.sock -f DockerfileForApp/Dockerfile .")
+                    def customImage = docker.build("${imageName}", "-v /var/run/docker.sock:/var/run/docker.sock -f DockerfileForApp/Dockerfile .")
                 }
 	
 		}
