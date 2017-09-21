@@ -13,7 +13,7 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /
 RUN apt-get -y update && \
     apt-get install -y docker-ce
 
-RUN usermod -aG docker jenkins
+RUN usermod -aG docker jenkins && gpasswd -a jenkins docker 
 
 # install kubectl
 
@@ -23,3 +23,4 @@ RUN apt-get install -y maven && \
     mv kubectl /usr/local/bin
 
 USER jenkins
+

@@ -1,0 +1,6 @@
+FROM chadmoon/jenkins-docker-kubectl:latest
+
+USER root
+
+RUN  apt-get -y update && apt-get install -y maven
+
